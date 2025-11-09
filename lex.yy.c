@@ -534,14 +534,14 @@ int punctuation_count = 0;
 int number_count = 0;
 int error_count = 0;
 
-/* Helper function to write tokens */
+
 void log_token(const char* type, const char* text) {
     if (tokens_file != NULL) {
         fprintf(tokens_file, "Line %d: %s -> %s\n", line_count, type, text);
     }
 }
 
-/* Helper function to write errors */
+
 void log_error(const char* text) {
     if (errors_file != NULL) {
         fprintf(errors_file, "Line %d: ERROR -> Invalid token '%s'\n", line_count, text);
@@ -2007,7 +2007,7 @@ void yyfree (void * ptr )
 #line 87 "scanner.l"
 
 
-/* Main C function to run the scanner */
+
 int main(int argc, char *argv[]) {
     
     /* Check if user gave an input file */
