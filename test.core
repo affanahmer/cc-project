@@ -1,0 +1,36 @@
+begin_main
+
+    constant integer MAX_ATTEMPTS = 10;
+    
+    integer count;
+    real total_score;
+    text user_name;
+    
+    print("Welcome to the CoreLang test program!");
+    
+    print("Please enter your name:");
+    read(user_name);
+    
+    print("Welcome, ");
+    print(user_name);
+
+    count := 0;
+    total_score := 100.5;
+    
+    repeat_while (count < 5)
+        print("Looping...");
+        count := count + 1;
+        total_score := total_score * 0.9;
+    
+    
+    if_cond (total_score < 75.0)
+        print("Score is low.");
+    else_cond
+        print("Score is high.");
+
+    print("This line has an @ error");
+
+    print("Final score:");
+    print(total_score);
+
+end_main
